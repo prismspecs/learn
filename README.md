@@ -4,7 +4,7 @@ A very minimal, high-aesthetic-quality static course portal for students, design
 
 ---
 
-## 🎨 Design Features
+## Design Features
 - **Visual System**: Refined editorial aesthetic with modern, structured typography pairing (`Syne` + `Plus Jakarta Sans`).
 - **Responsive Layout**: Asymmetrical grid on desktop that gracefully collapses to a single-column layout on mobile devices.
 - **Theme Adaptation**: Deep slate-and-cream dark mode with warm gold accents by default, with a manual toggle to a paper-like light theme.
@@ -14,7 +14,7 @@ A very minimal, high-aesthetic-quality static course portal for students, design
 
 ---
 
-## 📂 File Structure
+## File Structure
 - `index.html`: SEO-optimized semantic markup containing all course details and syllabi.
 - `style.css`: Modern CSS variables, fluid typography rules, layouts, and animations.
 - `app.js`: Clean JavaScript router, drawer controllers, and local storage theme persistence.
@@ -22,7 +22,7 @@ A very minimal, high-aesthetic-quality static course portal for students, design
 
 ---
 
-## 🚀 Running Locally
+## Running Locally
 
 Since the project uses vanilla web technologies, you can open `index.html` directly in your browser. For local server testing:
 
@@ -34,7 +34,7 @@ Then navigate to `http://localhost:8080` in your web browser.
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 To verify page structure, routes, accessibility metadata, and SEO compatibility, run the built-in python test script:
 
@@ -44,7 +44,7 @@ python3 test_site.py
 
 ---
 
-## 🌐 Deploying to GitHub Pages
+## Deploying to GitHub Pages
 
 The repository remote is already configured for `git@github.com:prismspecs/learn.git`. To deploy the site:
 
