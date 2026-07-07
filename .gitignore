@@ -1,0 +1,10 @@
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Local / OS files
+.DS_Store
+Thumbs.db
+
+# Cloned sources
+cloned_repos/

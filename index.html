@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Course portal and syllabi for classes taught by Grayson Earle, including Hacking as Practice, Creative Coding, and Unity for Artists.">
+  <title>Grayson Earle — Class Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- --- Header --- -->
+  <header>
+    <div class="logo-group">
+      <a href="#" class="logo">Grayson Earle</a>
+      <div class="logo-subtitle">Artist, Educator & Tactical Media Practitioner</div>
+    </div>
+    <nav>
+      <button id="bio-toggle" class="nav-link" aria-label="Open Biography">Bio</button>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle light/dark theme">
+        <!-- Sun Icon -->
+        <svg class="sun-icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5" />
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <!-- Moon Icon -->
+        <svg class="moon-icon" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- --- Main Wrapper --- -->
+  <main>
+    
+    <!-- --- Homepage View --- -->
+    <section id="home" class="fade-in">
+      <div class="hero">
+        <h1>Syllabi &amp; Resources for Students</h1>
+        <p>A minimal index of current and past courses taught by Grayson Earle. Select your class below to access the full curriculum, schedule, requirements, and repositories.</p>
+      </div>
+
+      <div class="course-grid-title">Select a Course</div>
+      <div class="courses-list">
+        
+        <!-- Course 1 -->
+        <a href="#hacking-als-praxis" class="course-card">
+          <div class="course-card-index">
+            <span>01</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="course-card-content">
+            <h2 class="course-card-title">Hacking als Praxis</h2>
+            <div class="course-card-inst">HBK Braunschweig</div>
+          </div>
+        </a>
+
+        <!-- Course 2 -->
+        <a href="#creative-coding-mischief" class="course-card">
+          <div class="course-card-index">
+            <span>02</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="course-card-content">
+            <h2 class="course-card-title">Creative Coding and Electronic Mischief</h2>
+            <div class="course-card-inst">School of Machines &amp; Make Believe, Berlin</div>
+          </div>
+        </a>
+
+        <!-- Course 3 -->
+        <a href="#unity-trust" class="course-card">
+          <div class="course-card-index">
+            <span>03</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="course-card-content">
+            <h2 class="course-card-title">Unity for Artists: Virtual Environments</h2>
+            <div class="course-card-inst">Trust, Berlin</div>
+          </div>
+        </a>
+
+        <!-- Course 4 -->
+        <a href="#unity-solitude" class="course-card">
+          <div class="course-card-index">
+            <span>04</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="course-card-content">
+            <h2 class="course-card-title">Unity 2-day Workshop</h2>
+            <div class="course-card-inst">Akademie Schloss Solitude</div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- --- Course Detail: Hacking als Praxis --- -->
+    <article id="hacking-als-praxis" class="course-detail">
+      <aside class="course-sidebar">
+        <a href="#" class="back-link">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg> Back
+        </a>
+        <div class="sidebar-meta">
+          <div class="meta-item">
+            <span class="meta-label">Institution</span>
+            <span class="meta-value">Hochschule für Bildende Künste Braunschweig</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Department</span>
+            <span class="meta-value">New Media / Fine Arts</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">8 Weeks (Session-based)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Format</span>
+            <span class="meta-value">Syllabus / Seminars</span>
+          </div>
+        </div>
+      </aside>
+      <div class="course-main-content">
+        <div class="course-main-header">
+          <div class="course-header-inst">HBK Braunschweig</div>
+          <h1 class="course-header-title">Hacking als Praxis</h1>
+        </div>
+        <div class="course-description">
+          In this course, we examine hacking not just as a technical exploit, but as a critical artistic and political practice. Students explore tactical media, subvert digital infrastructures, and unpack the hidden politics embedded in software, games, and networks. Taking inspiration from guerrilla projection, software modifications, and hardware tracking, we develop creative interventions that challenge authority, surveillance, and corporate logistics.
+        </div>
+        
+        <h2 class="section-title">Schedule</h2>
+        <div class="schedule-list">
+          
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 01: The Art of Subversion &amp; Tactical Media</h3>
+              <span class="schedule-item-date">Week 1</span>
+            </div>
+            <div class="schedule-item-content">
+              Introduction to tactical media history. Case studies of artistic interventions (e.g., Bail Bloc, The Illuminator, RTMark). Understanding systems as artistic mediums.
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Assignment</span>
+                Identify a physical or digital system in your daily life and document its rules, constraints, and points of vulnerability.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 02: Deconstructing Code &amp; Algorithmic Authority</h3>
+              <span class="schedule-item-date">Week 2</span>
+            </div>
+            <div class="schedule-item-content">
+              Code as law and ideology. Analyzing the rules governing digital spaces, including game engines, physics systems, and police behaviors in simulations. Textual analysis of code.
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Assignment</span>
+                Write a critique of a specific system rule or boundary in a popular software, website, or game.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 03: Physical Interventions &amp; Guerrilla Projections</h3>
+              <span class="schedule-item-date">Week 3</span>
+            </div>
+            <div class="schedule-item-content">
+              Reclaiming public space. The logistics and aesthetics of guerrilla projection. Mobile projection setups, urban hacking, and public display safety/legality.
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Assignment</span>
+                Design a blueprint for a mock public projection intervention focusing on a local political or social issue.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 04: Hardware Modification &amp; Counter-Surveillance</h3>
+              <span class="schedule-item-date">Week 4</span>
+            </div>
+            <div class="schedule-item-content">
+              Subverting commercial electronics. Tracing logistics networks (GPS tracking, hidden audio, logistics transparency) and reclaiming consumer hardware for counter-narratives.
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Assignment</span>
+                Create a proposal for tracing or subverting an opaque supply chain, tracking mechanism, or surveillance tool.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 05: Network Interventions &amp; Digital Commons</h3>
+              <span class="schedule-item-date">Week 5</span>
+            </div>
+            <div class="schedule-item-content">
+              Alternative networks, net-art, and decentralized structures. Software tools for community resistance, mutual aid, and self-hosted communication.
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Assignment</span>
+                Prototype a simple offline or mesh-network concept using open-source tools.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 06: Student Project Proposals &amp; Critique</h3>
+              <span class="schedule-item-date">Week 6</span>
+            </div>
+            <div class="schedule-item-content">
+              Pitching project ideas. Peer-review of concept papers and blueprints. Refinement of technical approaches and artistic statements.
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Project proposal document (1 page + conceptual sketch).
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 07: Development and Prototyping Workshop</h3>
+              <span class="schedule-item-date">Week 7</span>
+            </div>
+            <div class="schedule-item-content">
+              In-class hacking session. Individual troubleshooting of software, hardware, and physical assemblies. Iteration on prototypes.
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Functional alpha prototype of the intervention.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 08: Final Showcase &amp; Public Discourse</h3>
+              <span class="schedule-item-date">Week 8</span>
+            </div>
+            <div class="schedule-item-content">
+              Exhibition and presentation of student hacks. Critical discussion of the social, political, and aesthetic implications of the works.
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Completed subversive intervention or prototype and documentation.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- --- Course Detail: Creative Coding --- -->
+    <article id="creative-coding-mischief" class="course-detail">
+      <aside class="course-sidebar">
+        <a href="#" class="back-link">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg> Back
+        </a>
+        <div class="sidebar-meta">
+          <div class="meta-item">
+            <span class="meta-label">Institution</span>
+            <span class="meta-value">School of Machines &amp; Make Believe, Berlin</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Term</span>
+            <span class="meta-value">Spring 2026</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Dates</span>
+            <span class="meta-value">Feb 3, 2026 – May 10, 2026</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Meeting Time</span>
+            <span class="meta-value">Tuesdays</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Repository</span>
+            <span class="meta-value"><a href="https://github.com/new-media-edu/creative_coding_mischief" target="_blank" rel="noopener">creative_coding_mischief</a></span>
+          </div>
+        </div>
+      </aside>
+      <div class="course-main-content">
+        <div class="course-main-header">
+          <div class="course-header-inst">School of Machines &amp; Make Believe</div>
+          <h1 class="course-header-title">Creative Coding &amp; Electronic Mischief</h1>
+        </div>
+        <div class="course-description">
+          This course is about creatively misusing technology for art and activism, with a DIY/open-source approach. Students build their own tools, starting with basic electronics and 3D fabrication and working up to systems that connect hardware, software, and networks. The course ends with a final project that puts all of it together.
+        </div>
+        
+        <h2 class="section-title">Schedule</h2>
+        <div class="schedule-list">
+          
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Orientation: Welcome</h3>
+              <span class="schedule-item-date">Feb 3 &amp; 5, 2026</span>
+            </div>
+            <div class="schedule-item-content">
+              Introduction to each other, course structure overview, installation check-ins, and goal alignments.
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 01: Introduction to Arduino</h3>
+              <span class="schedule-item-date">Feb 10, 2026</span>
+            </div>
+            <div class="schedule-item-content">
+              <ul class="schedule-topics">
+                <li>Course overview and introduction.</li>
+                <li>What is electricity?</li>
+                <li>Introduction to Arduino hardware and pins.</li>
+                <li>Basic wiring and breadboards.</li>
+                <li>Blinking LEDs with <code>digitalWrite()</code>.</li>
+                <li>Basic programming concepts: variables, constants, flow control.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Working LED circuit with custom blink patterns.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 02: Inputs and Serial Communication</h3>
+              <span class="schedule-item-date">Feb 17, 2026</span>
+            </div>
+            <div class="schedule-item-content">
+              <ul class="schedule-topics">
+                <li>Conditional logic (if/else statements).</li>
+                <li>Reading digital inputs with buttons.</li>
+                <li>Understanding the floating state and pull-up/pull-down resistors.</li>
+                <li>Serial communication for debugging and monitoring.</li>
+                <li>Using the Serial Monitor to view Arduino output.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Button-controlled circuit with serial feedback.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 03: Sound and Square Waves</h3>
+              <span class="schedule-item-date">Feb 24, 2026</span>
+            </div>
+            <div class="schedule-item-content">
+              <ul class="schedule-topics">
+                <li>How speakers and buzzers work.</li>
+                <li>Generating square waves with <code>digitalWrite()</code>.</li>
+                <li>Understanding frequency and pitch.</li>
+                <li>Using the <code>tone()</code> function.</li>
+                <li>Building speaker circuits with piezo buzzers.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Working sound generator with variable tones.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 04: Analog Input and Loops</h3>
+              <span class="schedule-item-date">Mar 3, 2026</span>
+            </div>
+            <div class="schedule-item-content">
+              <ul class="schedule-topics">
+                <li>Reading analog values with <code>analogRead()</code>.</li>
+                <li>Understanding potentiometers and variable resistances.</li>
+                <li>Mapping values from one range to another with <code>map()</code>.</li>
+                <li>Creating repetition with while loops.</li>
+                <li>Combining analog input with sound output.</li>
+                <li>Building interactive musical instruments.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Potentiometer-controlled tone generator or simple synthesizer.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 05: Sensors, Servos, and Intro to Processing</h3>
+              <span class="schedule-item-date">Mar 10, 2026</span>
+            </div>
+            <div class="schedule-item-content">
+              <ul class="schedule-topics">
+                <li>Sensor showcase: ultrasonic distance sensor.</li>
+                <li>Introduction to servo motors and the Servo library.</li>
+                <li>Building a 2-DOF robot arm.</li>
+                <li>Introduction to Processing: installation and first sketch.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                2-DOF robot arm; Processing installed with basic sketch running.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 06: Arduino ↔ Processing</h3>
+              <span class="schedule-item-date">Mar 17, 2026</span>
+            </div>
+            <div class="schedule-item-content">
+              <strong>Guest Instructor: Sarah Grant</strong>
+              <ul class="schedule-topics">
+                <li>Serial communication between Arduino and Processing.</li>
+                <li>Sending sensor data to control on-screen visuals (potentiometer → circle size).</li>
+                <li>Sending screen data to control hardware (mouse → servo angle).</li>
+                <li>Two-way communication with a call-and-response handshake.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Two-way Arduino/Processing sketch (pot → circle size, mouse → servo).
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 07 &amp; 08: 3D Design &amp; Fabrication</h3>
+              <span class="schedule-item-date">Mar 24 &amp; 31, 2026</span>
+            </div>
+            <div class="schedule-item-content">
+              <strong>Guest Instructor: Sarah Grant</strong>
+              <ul class="schedule-topics">
+                <li>Introduction to 3D design and modeling.</li>
+                <li>Designing custom housings for electronics.</li>
+                <li>Slicing and 3D printing workflow.</li>
+                <li>Integrating hardware with printed parts.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Custom 3D printed housing or component integrated with electronics.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 09 &amp; 10: Projection Mapping with TouchDesigner</h3>
+              <span class="schedule-item-date">Apr 7 &amp; 14, 2026</span>
+            </div>
+            <div class="schedule-item-content">
+              <ul class="schedule-topics">
+                <li>Introduction to projection mapping fundamentals.</li>
+                <li>Loading and configuring TouchDesigner.</li>
+                <li>Using kantanMapper for spatial mapping.</li>
+                <li>Assigning textures and media to projection shapes.</li>
+                <li>Aligning projections with physical objects.</li>
+                <li>Receiving OSC/MIDI data to trigger visuals.</li>
+                <li>Creating reactive installations.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Projection-mapped installation triggered by physical sensors.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 11, 12 &amp; 13: Final Project Workshop</h3>
+              <span class="schedule-item-date">Apr 21 – May 5, 2026</span>
+            </div>
+            <div class="schedule-item-content">
+              <ul class="schedule-topics">
+                <li>Final project development, assembly, and polishing.</li>
+                <li>Individual and group troubleshooting.</li>
+                <li>Instructor check-ins, testing, documentation, and presentation prep.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Completed Final Project, ready for exhibition.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Final Exhibition</h3>
+              <span class="schedule-item-date">May 14, 2026</span>
+            </div>
+            <div class="schedule-item-content">
+              Exhibition of final installations and physical projects to the public.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- --- Course Detail: Unity for Artists --- -->
+    <article id="unity-trust" class="course-detail">
+      <aside class="course-sidebar">
+        <a href="#" class="back-link">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg> Back
+        </a>
+        <div class="sidebar-meta">
+          <div class="meta-item">
+            <span class="meta-label">Location</span>
+            <span class="meta-value">Trust, Berlin</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">4 Days (2.5h / session)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Software</span>
+            <span class="meta-value">Unity 6, Polycam</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Prerequisites</span>
+            <ul class="sidebar-list">
+              <li>Unity Hub &amp; Unity 6 installed</li>
+              <li>Polycam app (iOS/Android)</li>
+              <li>No coding required</li>
+            </ul>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Repository</span>
+            <span class="meta-value"><a href="https://github.com/new-media-edu/unity-trust" target="_blank" rel="noopener">unity-trust</a></span>
+          </div>
+        </div>
+      </aside>
+      <div class="course-main-content">
+        <div class="course-main-header">
+          <div class="course-header-inst">Trust, Berlin</div>
+          <h1 class="course-header-title">Unity for Artists: Virtual Environments</h1>
+        </div>
+        <div class="course-description">
+          This 4-day intensive workshop is designed for artists and designers who want to use Unity 6 (a real-time 3D engine used widely in games, art, and architecture) to build immersive digital environments. No previous experience with Unity is required. In this no-code workshop students will learn how to create and inhabit virtual environments, focusing on environmental design, lighting, physics, and spatial audio.
+        </div>
+        
+        <h2 class="section-title">Schedule</h2>
+        <div class="schedule-list">
+          
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Day 1: Foundations &amp; Spatial Sketching</h3>
+              <span class="schedule-item-date">Navigation &amp; Prototyping</span>
+            </div>
+            <div class="schedule-item-content">
+              <ul class="schedule-topics">
+                <li>Introduction: Unity 6, Universal Render Pipeline (URP), and the Real-time Rendering Pipeline.</li>
+                <li>The Sandbox: Interface navigation (Hierarchy, Project, Scene, Game, Inspector).</li>
+                <li>Physics &amp; Logic: Basic 3D objects and Rigidbody physics.</li>
+                <li>Concept Development: Pitching a narrative/spatial concept for the 4-day project.</li>
+                <li>ProBuilder: Greyboxing the environment layout.</li>
+                <li>Navigation: Setting up the First Person Controller.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Assignment</span>
+                Complete the basic architectural layout of your space.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Day 2: Building the World (Assets &amp; Materials)</h3>
+              <span class="schedule-item-date">Populating &amp; Styling</span>
+            </div>
+            <div class="schedule-item-content">
+              <ul class="schedule-topics">
+                <li>Asset Integration: Importing 3D models (GLB/FBX), using the Unity Asset Store.</li>
+                <li>Materials &amp; Shaders: URP Lit Shader, Albedo, Normal Maps, Tiling, and Transparency.</li>
+                <li>Modular Design: Using Prefabs and ProBuilder for efficient world-building.</li>
+                <li>Environmental Detail: Introduction to foliage, simple particles (Fog/Dust), and decals.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Assignment</span>
+                Apply materials and populate your environment with high-fidelity assets.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Day 3: Atmosphere &amp; Cinematic Storytelling</h3>
+              <span class="schedule-item-date">Lighting, Mood &amp; Camera</span>
+            </div>
+            <div class="schedule-item-content">
+              <ul class="schedule-topics">
+                <li>Lighting Design: Directional vs Point/Spot lights, Light Layers, and Volumetric Clouds/Fog (Unity 6 features).</li>
+                <li>Spatial Audio: 3D Audio Sources, ambient wind/scapes, and Audio Reverb Zones.</li>
+                <li>Advanced Mood: Reflection Probes, Light Probes, and Skybox manipulation.</li>
+                <li>Unity Timeline &amp; Cinemachine: Creating cinematic flythroughs and camera transitions.</li>
+                <li>Scripted Interactivity: Using provided scripts for triggers, rotations, and audio fades.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Assignment</span>
+                Create a 30-second cinematic flythrough with integrated spatial audio.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Day 4: Polish, Sound &amp; Final Showcase</h3>
+              <span class="schedule-item-date">Deployment &amp; Presentation</span>
+            </div>
+            <div class="schedule-item-content">
+              <ul class="schedule-topics">
+                <li>Post-Processing Mastery: Color Grading, Bloom, Motion Blur, and Film Grain.</li>
+                <li>Standalone Builds: Exporting your project as a playable <code>.exe</code> or <code>.app</code>.</li>
+                <li>Rendering &amp; Capture: Using Unity Recorder to export high-quality video.</li>
+                <li>Final Group Review: Showcase presentations and peer feedback.</li>
+              </ul>
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Rendered cinematic presentation or standalone executable build.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- --- Course Detail: Unity 2-day Workshop --- -->
+    <article id="unity-solitude" class="course-detail">
+      <aside class="course-sidebar">
+        <a href="#" class="back-link">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg> Back
+        </a>
+        <div class="sidebar-meta">
+          <div class="meta-item">
+            <span class="meta-label">Location</span>
+            <span class="meta-value">Akademie Schloss Solitude</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">2-day / 1-day Intensive</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Software</span>
+            <span class="meta-value">Unity 6, Polycam</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Prerequisites</span>
+            <ul class="sidebar-list">
+              <li>Unity Hub &amp; Unity 6 installed</li>
+              <li>Polycam app (iOS/Android)</li>
+            </ul>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Repository</span>
+            <span class="meta-value"><a href="https://github.com/new-media-edu/unity-virtual_environments-2day" target="_blank" rel="noopener">unity-virtual_environments-2day</a></span>
+          </div>
+        </div>
+      </aside>
+      <div class="course-main-content">
+        <div class="course-main-header">
+          <div class="course-header-inst">Akademie Schloss Solitude</div>
+          <h1 class="course-header-title">Unity for Artists: Virtual Galleries &amp; Environments</h1>
+        </div>
+        <div class="course-description">
+          This workshop is a hands-on, intensive format for artists who want to use Unity for spatial planning or building digital-only worlds. We skip the heavy coding and focus on a drag-and-drop workflow that gets you building immediately. By the end of the workshop, you will know how to mock up a gallery space to scale, set up lighting, and pull real-world objects into your scene using photogrammetry.
+        </div>
+        
+        <h2 class="section-title">Schedule</h2>
+        <div class="schedule-list">
+          
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 01: Morning Session</h3>
+              <span class="schedule-item-date">10:00 – 13:00</span>
+            </div>
+            <div class="schedule-item-content">
+              Interface basics, navigating the 3D viewport, building room layouts and custom gallery shapes using ProBuilder, and setting up first-person navigation controllers.
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Lunch Assignment (13:00 - 14:00)</span>
+                Go find something to scan around the grounds of Solitude using Polycam.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-item-header">
+              <h3 class="schedule-item-title">Session 02: Afternoon Session</h3>
+              <span class="schedule-item-date">14:00 – 16:00</span>
+            </div>
+            <div class="schedule-item-content">
+              Importing 3D photogrammetry scans, setting up materials and high-quality textures, configuring lighting configurations and studio rendering, and studio time to polish your interactive virtual galleries.
+              <div class="schedule-deliverable">
+                <span class="deliverable-label">Deliverable</span>
+                Scale 3D gallery room containing imported real-world scans.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- --- Footer --- -->
+  <footer>
+    <div>&copy; 2026 Grayson Earle</div>
+    <div>Designed for New Media Students</div>
+  </footer>
+
+  <!-- --- Bio Drawer Panel --- -->
+  <div id="bio-overlay" class="bio-overlay" aria-hidden="true"></div>
+  <div id="bio-drawer" class="bio-drawer" role="dialog" aria-labelledby="bio-drawer-title" aria-modal="true">
+    <div class="bio-header">
+      <h2 id="bio-drawer-title" class="bio-title">Biography</h2>
+      <button id="bio-close" class="close-btn" aria-label="Close Biography">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="bio-body">
+      <p><strong>Grayson Earle</strong> is a contemporary artist and tactical media practitioner from the United States, based in Berlin. His work examines digital technologies and political agency through guerrilla projection, software, and simulation.</p>
+      
+      <p>He is known for <em>Bail Bloc</em>, a program that mined cryptocurrency to post bail for low-income individuals in New York City, and for his membership in <em>The Illuminator</em>, a guerrilla projection collective. His film <em>Why Don't the Cops Fight Each Other?</em> dissects the source code governing police behavior in video games and has screened at SXSW, the Oberhausen Film Festival, and the Australian Centre for the Moving Image (ACMI). His recent project <em>Return to Sender</em> uses GPS trackers and hidden audio devices to trace Amazon's opaque logistics network.</p>
+
+      <p>His work has been presented at the Whitney Museum of American Art, KW Institute for Contemporary Art, and the Singapore Art Museum. He has held residencies at Akademie Schloss Solitude, Pioneer Works, and BPA// Berlin, and serves as a Jury Member for Digital Arts at Akademie Schloss Solitude, where he also serves as the long-term technical lead for the Web Residency program.</p>
+
+      <p>Earle has taught as a Visiting Assistant Professor at Oberlin College and a Substitute Assistant Professor at New York City College of Technology. He has also taught at Parsons School of Art and Design and die Angewandte (University of Applied Arts Vienna). He currently teaches Hacking as Practice at Hochschule für Bildende Künste Braunschweig. He is a scholarship recipient in Critical Philosophy at the New Centre for Research &amp; Practice.</p>
+
+      <h3 class="bio-projects-title">Featured Projects</h3>
+      <div class="bio-projects">
+        <div class="bio-project-item">
+          <span class="bio-project-name">Bail Bloc</span>
+          <div class="bio-project-desc">A desktop application mining cryptocurrency to pay bail for people held in pre-trial detention.</div>
+        </div>
+        <div class="bio-project-item">
+          <span class="bio-project-name">The Illuminator</span>
+          <div class="bio-project-desc">A guerrilla art collective utilizing projection mapping for political activism in public space.</div>
+        </div>
+        <div class="bio-project-item">
+          <span class="bio-project-name">Return to Sender</span>
+          <div class="bio-project-desc">Investigative project using hardware trackers to trace package logistics and corporate accountability.</div>
+        </div>
+        <div class="bio-project-item">
+          <span class="bio-project-name">Why Don't the Cops Fight Each Other?</span>
+          <div class="bio-project-desc">Experimental film examining video game source code to investigate policing rules and virtual systems.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
