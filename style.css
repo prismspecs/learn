@@ -4,15 +4,15 @@
 /* --- CSS Variables & Design Tokens --- */
 :root {
   /* Dark Theme (Default) */
-  --bg-color: oklch(0.13 0.01 80);
-  --bg-lift: oklch(0.16 0.01 80);
-  --text-primary: oklch(0.94 0.01 80);
-  --text-secondary: oklch(0.70 0.01 80);
-  --text-muted: oklch(0.50 0.01 80);
-  --accent-color: oklch(0.82 0.11 85);
-  --accent-rgb: 209, 185, 127;
-  --border: oklch(0.24 0.01 80);
-  --overlay-bg: rgba(13, 14, 13, 0.7);
+  --bg-color: oklch(0.12 0.005 250);
+  --bg-lift: oklch(0.16 0.005 250);
+  --text-primary: oklch(0.96 0.002 250);
+  --text-secondary: oklch(0.75 0.005 250);
+  --text-muted: oklch(0.50 0.005 250);
+  --accent-color: oklch(0.78 0.08 245);
+  --accent-rgb: 150, 175, 205;
+  --border: oklch(0.22 0.005 250);
+  --overlay-bg: rgba(10, 11, 12, 0.75);
 
   /* Fonts */
   --font-display: 'Syne', sans-serif;
@@ -33,15 +33,15 @@
 
 [data-theme="light"] {
   /* Light Theme */
-  --bg-color: oklch(0.97 0.01 80);
-  --bg-lift: oklch(0.93 0.01 80);
-  --text-primary: oklch(0.18 0.01 80);
-  --text-secondary: oklch(0.40 0.01 80);
-  --text-muted: oklch(0.60 0.01 80);
-  --accent-color: oklch(0.52 0.10 75);
-  --accent-rgb: 130, 105, 55;
-  --border: oklch(0.86 0.01 80);
-  --overlay-bg: rgba(247, 247, 245, 0.75);
+  --bg-color: oklch(0.98 0.002 250);
+  --bg-lift: oklch(0.94 0.005 250);
+  --text-primary: oklch(0.16 0.005 250);
+  --text-secondary: oklch(0.42 0.005 250);
+  --text-muted: oklch(0.62 0.005 250);
+  --accent-color: oklch(0.48 0.10 245);
+  --accent-rgb: 75, 105, 140;
+  --border: oklch(0.88 0.002 250);
+  --overlay-bg: rgba(240, 242, 245, 0.75);
 }
 
 /* --- Reset & Global --- */
@@ -110,10 +110,10 @@ header {
 }
 
 .logo {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(1.5rem, 3vw, 2.2rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   line-height: 1;
 }
 
