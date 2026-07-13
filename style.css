@@ -429,18 +429,6 @@ nav {
   margin-bottom: var(--space-xs);
 }
 
-.course-header-top-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--space-xs);
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.course-header-top-row .course-header-inst {
-  margin-bottom: 0;
-}
 
 .enroll-link {
   display: inline-flex;
