@@ -408,6 +408,34 @@ nav {
   border-bottom-color: var(--accent-color);
 }
 
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: var(--transition-smooth);
+  margin-top: var(--space-xs);
+  width: fit-content;
+}
+
+.repo-link:hover {
+  border-color: var(--accent-color);
+  background-color: var(--bg-lift);
+  color: var(--accent-color);
+  box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.05);
+}
+
+.repo-link svg {
+  stroke: currentColor;
+}
+
 /* Course Main Column */
 .course-main-content {
   display: flex;
