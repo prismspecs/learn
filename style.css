@@ -449,17 +449,21 @@ nav {
   font-size: 0.85rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--bg-color);
+  background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
   padding: 6px 16px;
   border-radius: 4px;
   transition: var(--transition-smooth);
+  box-shadow: 0 2px 8px rgba(var(--accent-rgb), 0.2);
 }
 
 .enroll-link:hover {
-  background-color: var(--accent-color);
+  background-color: var(--text-primary);
+  border-color: var(--text-primary);
   color: var(--bg-color);
-  box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.2);
+  box-shadow: 0 4px 16px rgba(var(--accent-rgb), 0.4);
+  transform: translateY(-1px);
 }
 
 .course-header-title {
