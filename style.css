@@ -440,6 +440,7 @@ nav {
 .course-main-content {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .course-main-header {
@@ -797,6 +798,7 @@ footer {
 
 .fanzine-gallery {
   overflow-x: auto;
+  max-width: 100%;
   padding: var(--space-sm) 0;
   margin-bottom: var(--space-md);
   scroll-behavior: smooth;
