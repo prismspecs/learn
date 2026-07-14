@@ -888,17 +888,7 @@ footer {
 .exhibition-media-item {
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-lift);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: var(--space-sm);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: var(--transition-smooth);
-}
-
-.exhibition-media-item:hover {
-  border-color: var(--accent-color);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  gap: var(--space-xs);
 }
 
 .exhibition-gif {
