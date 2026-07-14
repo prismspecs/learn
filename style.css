@@ -953,4 +953,46 @@ footer {
   color: var(--text-primary);
 }
 
+/* Documentation Showcase Section */
+.documentation-section {
+  margin-bottom: var(--space-lg);
+}
+
+.documentation-intro {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  font-weight: 300;
+}
+
+.documentation-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .documentation-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
+
+.documentation-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.doc-video, .doc-image {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  background: #000;
+  border-radius: 4px;
+}
+
+
 
