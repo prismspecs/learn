@@ -916,3 +916,44 @@ footer {
   line-height: 1.4;
 }
 
+/* Contact / Questions Section */
+.home-questions {
+  text-align: center;
+  margin-top: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.home-questions a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.home-questions a:hover {
+  color: var(--text-primary);
+}
+
+.course-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.header-questions {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.header-questions a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.header-questions a:hover {
+  color: var(--text-primary);
+}
+
+
