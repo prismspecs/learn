@@ -92,7 +92,7 @@ class TestCoursePortal(unittest.TestCase):
         self.assertTrue(has_description, "Missing meta description for SEO")
 
     def test_courses_present(self):
-        """Verify that all four courses are defined in the HTML."""
+        """Verify that every course is defined in the HTML."""
         if not os.path.exists(self.html_path):
             self.skipTest("index.html not found")
 
@@ -110,7 +110,8 @@ class TestCoursePortal(unittest.TestCase):
             "hacking-als-praxis",
             "creative-coding-mischief",
             "unity-trust",
-            "unity-solitude"
+            "unity-solitude",
+            "ai-speculations"
         ]
 
         for course in required_courses:
