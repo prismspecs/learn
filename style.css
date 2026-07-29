@@ -1140,8 +1140,11 @@ footer {
   margin-top: var(--space-sm);
 }
 
+/* Every slide is 16:9, so pin the box to that ratio. Without this the
+   container collapses to nothing while the next image loads. */
 .slide-viewport {
   position: relative;
+  aspect-ratio: 16 / 9;
   background-color: var(--bg-color);
   border-radius: 4px;
   overflow: hidden;
@@ -1150,7 +1153,8 @@ footer {
 .slide {
   display: none;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
   cursor: pointer;
 }
 

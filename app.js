@@ -61,21 +61,44 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Slideshows ---
+  const deckWarmers = [];
+
   document.querySelectorAll('[data-slideshow]').forEach(show => {
     const slides = show.querySelectorAll('.slide');
     const counter = show.querySelector('.slide-counter');
     if (!slides.length) return;
     let index = 0;
+    let warmedAll = false;
+
+    // Promote data-src to src so the image loads and decodes before it is
+    // revealed. Hidden slides ship without a src to keep initial load light.
+    const warm = (i) => {
+      const img = slides[(i + slides.length) % slides.length];
+      if (!img || !img.dataset.src) return;
+      img.src = img.dataset.src;
+      delete img.dataset.src;
+    };
+
+    const warmAll = () => {
+      if (warmedAll) return;
+      warmedAll = true;
+      slides.forEach((_, i) => warm(i));
+    };
 
     const go = (step) => {
+      warmAll();
       slides[index].classList.remove('is-active');
       index = (index + step + slides.length) % slides.length;
       slides[index].classList.add('is-active');
       if (counter) counter.textContent = `${index + 1} / ${slides.length}`;
+      warm(index + 1);
+      warm(index - 1);
     };
 
     slides[0].classList.add('is-active');
     if (counter) counter.textContent = `1 / ${slides.length}`;
+    warm(1);
+    warm(-1);
 
     show.querySelector('[data-slide-prev]').addEventListener('click', () => go(-1));
     show.querySelector('[data-slide-next]').addEventListener('click', () => go(1));
@@ -85,7 +108,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'ArrowLeft') go(-1);
       if (e.key === 'ArrowRight') go(1);
     });
+
+    deckWarmers.push(warmAll);
   });
+
+  // Hidden slides start without a src so they don't compete with the visible
+  // page. Once it has settled, load the rest so advancing never shows a gap.
+  if (deckWarmers.length) {
+    const warmDecks = () => deckWarmers.forEach(fn => fn());
+    const schedule = () => window.requestIdleCallback
+      ? window.requestIdleCallback(warmDecks, { timeout: 3000 })
+      : setTimeout(warmDecks, 1200);
+    if (document.readyState === 'complete') schedule();
+    else window.addEventListener('load', schedule, { once: true });
+  }
 
   // --- Routing & Transitions ---
   const handleRouting = () => {
