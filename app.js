@@ -60,6 +60,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // --- Slideshows ---
+  document.querySelectorAll('[data-slideshow]').forEach(show => {
+    const slides = show.querySelectorAll('.slide');
+    const counter = show.querySelector('.slide-counter');
+    if (!slides.length) return;
+    let index = 0;
+
+    const go = (step) => {
+      slides[index].classList.remove('is-active');
+      index = (index + step + slides.length) % slides.length;
+      slides[index].classList.add('is-active');
+      if (counter) counter.textContent = `${index + 1} / ${slides.length}`;
+    };
+
+    slides[0].classList.add('is-active');
+    if (counter) counter.textContent = `1 / ${slides.length}`;
+
+    show.querySelector('[data-slide-prev]').addEventListener('click', () => go(-1));
+    show.querySelector('[data-slide-next]').addEventListener('click', () => go(1));
+    // Clicking the image advances, matching how people expect a gallery to behave
+    show.querySelector('.slide-viewport').addEventListener('click', () => go(1));
+    show.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') go(-1);
+      if (e.key === 'ArrowRight') go(1);
+    });
+  });
+
   // --- Routing & Transitions ---
   const handleRouting = () => {
     const hash = window.location.hash;

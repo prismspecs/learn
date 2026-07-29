@@ -1135,6 +1135,66 @@ footer {
   margin-bottom: var(--space-sm);
 }
 
+/* --- Slideshow --- */
+.slideshow {
+  margin-top: var(--space-sm);
+}
+
+.slide-viewport {
+  position: relative;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.slide.is-active {
+  display: block;
+}
+
+.slide-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.slide-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.slide-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.slide-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.slide-counter {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
 /* Gallery thumbnails are mixed aspect ratios; crop them to a common square */
 .project-gallery .project-image {
   aspect-ratio: 1 / 1;
