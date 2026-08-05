@@ -111,7 +111,10 @@ class TestCoursePortal(unittest.TestCase):
             "creative-coding-mischief",
             "unity-trust",
             "unity-solitude",
-            "ai-speculations"
+            "ai-speculations",
+            "game-programming",
+            "physical-computing",
+            "other-courses"
         ]
 
         for course in required_courses:

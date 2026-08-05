@@ -1116,6 +1116,41 @@ footer {
   background-color: var(--bg-color);
 }
 
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: var(--transition-fast);
+}
+
+.project-link:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.project-link svg {
+  stroke: currentColor;
+}
+
+/* Archive courses list many small projects; pair them up so a page of
+   single-screenshot entries doesn't run on forever */
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  align-items: start;
+}
+
+.work-grid > .project-block {
+  margin-bottom: 0;
+}
+
 .project-media-split {
   display: grid;
   grid-template-columns: 1fr;
@@ -1205,6 +1240,12 @@ footer {
   object-fit: cover;
 }
 
+/* Screen captures are uniformly widescreen, and a square crop throws away
+   most of the frame. Keep those rows at the aspect the work was made in. */
+.project-gallery.wide .project-image {
+  aspect-ratio: 16 / 9;
+}
+
 /* Paired clips have different aspect ratios; cap them so the row stays level */
 .project-block .documentation-grid .doc-video {
   max-height: 320px;
@@ -1225,6 +1266,10 @@ footer {
 
   .project-gallery {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
