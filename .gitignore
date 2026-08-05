@@ -8,3 +8,6 @@ Thumbs.db
 
 # Cloned sources
 cloned_repos/
+
+# Generated PDFs
+dist/

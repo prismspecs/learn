@@ -1,0 +1,673 @@
+/* --- Teaching portfolio, print stylesheet -------------------------------
+   Follows the "Impeccable" academic document standard used across the
+   application vault (~/workbench/Apply/DESIGN.md and core/render/
+   render_impeccable.py, which is the canonical template).
+
+   Standalone by design: print.html does not load the site's stylesheet, so
+   nothing here has to fight the site's visual language. Every font is a
+   Liberation face installed locally.
+
+   House rules carried over: flat, no shadows, no rounded corners, no
+   decorative colour. Hierarchy is typographic, and it has to carry the load
+   on its own: the only horizontal rules in the whole document are the one
+   under the letterhead and the one under a title that opens a section. A page
+   of student work draws none at all.
+   ----------------------------------------------------------------------- */
+
+@page {
+  size: A4;
+  margin: 1.25cm;
+}
+
+:root {
+  --ink: #1a1a1a;
+  --rule: #f0f0f0;
+  --muted: #999999;
+  --accent: #000000;
+  --serif: 'Liberation Serif', 'Georgia', serif;
+  --sans: 'Liberation Sans', 'Helvetica', sans-serif;
+  --mono: 'Liberation Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--serif);
+  font-size: 10.5pt;
+  line-height: 1.5;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -webkit-print-color-adjust: exact;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* --- Letterhead --------------------------------------------------------- */
+.letterhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 0.3cm;
+  margin-bottom: 0.55cm;
+  border-bottom: 0.5pt solid var(--rule);
+}
+
+.letterhead-name {
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: 18pt;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.letterhead-label {
+  margin-top: 4px;
+  font-family: var(--sans);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.letterhead-contact {
+  font-family: var(--sans);
+  font-size: 8pt;
+  text-align: right;
+  color: var(--muted);
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* --- Headings ----------------------------------------------------------- */
+h1, h2, h3,
+.course-header-title,
+.section-title,
+.project-title,
+.reference-heading {
+  font-family: var(--sans);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-wrap: balance;
+  margin: 0.6cm 0 0.2cm;
+}
+
+/* Course title, the top of the hierarchy inside the document, and the only
+   heading level that draws a rule. Everything below it is separated by size,
+   weight and colour instead — a page carrying four headings should not also
+   be carrying four horizontal lines. */
+h1,
+.course-header-title {
+  font-size: 14pt;
+  margin-top: 0;
+  padding-bottom: 0.1cm;
+  border-bottom: 0.5pt solid var(--rule);
+}
+
+h2,
+.section-title {
+  font-size: 10.5pt;
+  letter-spacing: 0.18em;
+}
+
+h3,
+.project-title,
+.reference-heading {
+  font-size: 9.5pt;
+  color: var(--muted);
+  margin-bottom: 0.1cm;
+}
+
+p {
+  margin: 0 0 0.4cm;
+  orphans: 2;
+  widows: 2;
+}
+
+ul, ol {
+  margin: 0 0 0.4cm;
+  padding-left: 0.5cm;
+}
+
+li {
+  margin-bottom: 0.15cm;
+}
+
+strong { font-weight: 700; color: var(--accent); }
+em { font-style: italic; }
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* --- Mono utility ------------------------------------------------------- */
+.mono,
+.course-header-inst,
+.archive-tag,
+.project-credit,
+.meta-label,
+.media-caption,
+.print-video-link,
+.print-url,
+.tag-inline,
+.deliverable-label,
+.schedule-item-date {
+  font-family: var(--mono);
+  font-size: 9pt;
+  letter-spacing: -0.02em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Teaching record ----------------------------------------------------
+   The opening statement of teaching responsibilities: the whole history in
+   one view, before any single course. */
+.record-note {
+  color: #555;
+  margin-bottom: 0.35cm;
+}
+
+.record-item {
+  margin-bottom: 0.22cm;
+  break-inside: avoid;
+}
+
+/* Eight institutions, so eight rules if this drew one — the bold sans against
+   the serif list below it separates them well enough on its own. */
+.record-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5cm;
+  margin-bottom: 0.06cm;
+}
+
+.record-inst {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 9.5pt;
+}
+
+.record-role {
+  font-family: var(--mono);
+  font-size: 8pt;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.record-courses,
+.record-workshops {
+  margin: 0;
+  padding-left: 0.45cm;
+}
+
+.record-courses li,
+.record-workshops li {
+  margin-bottom: 0.02cm;
+  font-size: 9.5pt;
+  line-height: 1.35;
+}
+
+/* Tuned so the entire teaching history sits on page one. */
+.record h2 {
+  margin-top: 0.4cm;
+}
+
+/* Two columns so the whole teaching history lands on one page rather than
+   stranding nine one-line entries on a second. */
+.record-workshops {
+  columns: 2;
+  column-gap: 0.6cm;
+  margin-bottom: 0.4cm;
+}
+
+/* --- Course entries ------------------------------------------------------ */
+/* University courses each open a page. Workshops are secondary evidence and
+   run on, so a two-day workshop never occupies the same weight as a course
+   taught over five years — and the Workshops heading does not start a page of
+   its own, which would strand the brief entry before it. */
+.entry-course {
+  break-before: page;
+}
+
+.tier-heading {
+  margin-top: 1cm;
+  break-after: avoid;
+}
+
+.entry-workshop {
+  margin-top: 0.7cm;
+}
+
+
+
+/* The title, institution and role must never sit alone at the foot of a page
+   with the course itself overleaf. */
+.entry-header {
+  margin-bottom: 0.35cm;
+  break-inside: avoid;
+  break-after: avoid;
+}
+
+.entry-header h1 {
+  margin-bottom: 0.12cm;
+  padding-bottom: 0.1cm;
+}
+
+/* A translated or secondary title, kept off the h1 so the title itself never
+   wraps to a second line of 14pt letter-spaced capitals. */
+.entry-subtitle {
+  font-style: italic;
+  font-size: 10pt;
+  color: #555;
+  margin-bottom: 0.1cm;
+}
+
+.entry-workshop .entry-header h1 {
+  font-size: 11pt;
+}
+
+/* Where, in what capacity, when — directly under the course title. */
+.entry-record {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5cm;
+}
+
+.entry-inst {
+  font-family: var(--sans);
+  font-size: 8.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.entry-role {
+  font-family: var(--mono);
+  font-size: 8pt;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.entry-description {
+  margin-bottom: 0.45cm;
+}
+
+/* Workshops carry smaller evidence than courses. */
+.entry-workshop .print-course-body img {
+  max-height: 6cm;
+}
+
+.entry-workshop .print-video img {
+  max-height: 5cm;
+}
+
+/* Institution line reads as a document label above the course title. */
+.course-header-inst {
+  display: block;
+  font-family: var(--sans);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.15cm;
+}
+
+.course-header-actions {
+  margin-top: 0.15cm;
+}
+
+/* The site draws this as a rounded pill; here it is a plain data marker. */
+.archive-tag {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 8pt;
+}
+
+.course-description {
+  margin-bottom: 0.5cm;
+}
+
+/* --- Metadata block ----------------------------------------------------- */
+/* The site's sidebar, laid across the top of a course as fielded data. */
+.print-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.35cm 0.6cm;
+  margin: 0 0 0.6cm;
+  break-inside: avoid;
+}
+
+.print-meta .meta-label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 7.5pt;
+  margin-bottom: 2px;
+}
+
+.print-meta .meta-value {
+  display: block;
+  font-size: 10pt;
+  line-height: 1.35;
+}
+
+.print-meta .sidebar-list {
+  margin: 0;
+  padding-left: 0.4cm;
+  font-size: 10pt;
+  line-height: 1.35;
+}
+
+.print-meta .sidebar-list li {
+  margin-bottom: 0;
+}
+
+/* --- Prose sections ----------------------------------------------------- */
+.brief-lede {
+  font-size: 12pt;
+  font-style: italic;
+}
+
+.pullquote {
+  margin: 0.5cm 0 0.5cm 0.6cm;
+  font-style: italic;
+}
+
+.pullquote cite {
+  display: block;
+  margin-top: 0.15cm;
+  font-family: var(--mono);
+  font-size: 9pt;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.schedule-deliverable {
+  margin: 0.3cm 0 0.4cm 0.5cm;
+}
+
+.deliverable-label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 7.5pt;
+}
+
+.documentation-intro,
+.fanzine-intro,
+.exhibition-intro {
+  margin-bottom: 0.4cm;
+}
+
+.print-outline-body {
+  margin-bottom: 0.4cm;
+}
+
+/* --- Student work ------------------------------------------------------- */
+.print-course-body .project-block {
+  margin-bottom: 0.7cm;
+}
+
+.project-block-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3cm;
+}
+
+.project-credit {
+  font-size: 8.5pt;
+}
+
+.project-desc {
+  margin: 0 0 0.25cm;
+}
+
+.project-image,
+.doc-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* --- Grids -------------------------------------------------------------- */
+/* Only genuinely atomic things resist breaking: one image with its caption,
+   one project card, one reference list. Multi-row grids must be allowed to
+   split, because a grid that refuses to break jumps to a fresh page whole and
+   strands whatever was left of the current one. */
+.project-media-split,
+.documentation-grid,
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4cm;
+  align-items: start;
+  margin-bottom: 0.4cm;
+}
+
+/* Multicol rather than grid: it balances the columns and flows across a page
+   break, where a two-column grid strands its last group on a page of its own. */
+.reference-columns {
+  columns: 2;
+  column-gap: 0.6cm;
+  margin-bottom: 0.4cm;
+}
+
+.project-gallery,
+.print-slides {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25cm;
+  align-items: start;
+  margin-bottom: 0.4cm;
+}
+
+.work-grid > .project-block,
+.documentation-item,
+figure {
+  break-inside: avoid;
+}
+
+/* A reference list is just a list; holding it whole pushes it to a fresh page
+   and leaves two thirds of the previous one empty. */
+.reference-group {
+  break-inside: auto;
+}
+
+.work-grid > .project-block {
+  margin-bottom: 0;
+}
+
+/* Hold a heading to the content it introduces. */
+h1, h2, h3,
+.section-title,
+.project-title,
+.project-block-header,
+.project-desc,
+.documentation-intro {
+  break-after: avoid;
+}
+
+/* --- Media -------------------------------------------------------------- */
+figure {
+  margin: 0 0 0.4cm;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.media-caption,
+figcaption {
+  margin-top: 0.12cm;
+  line-height: 1.4;
+}
+
+/* Cap a single image so it can never claim a whole page on its own. */
+.print-course-body img {
+  max-height: 11cm;
+  object-fit: contain;
+  object-position: left top;
+}
+
+/* A standalone image sizes to its own proportions. Letterboxing it inside a
+   full-measure box just parks it against a field of white. */
+.project-single-media img {
+  width: auto;
+  max-width: 100%;
+}
+
+/* Anything in a grid gets a fixed cell instead, so a contact sheet reads as
+   a sheet. Left to their natural heights the rows stagger and the page turns
+   into a mosaic. Contain rather than cover: nothing gets cropped. */
+.print-slides img,
+.work-grid img {
+  aspect-ratio: 16 / 9;
+  max-height: none;
+  object-position: center;
+}
+
+.project-gallery img {
+  aspect-ratio: 4 / 3;
+  max-height: none;
+  object-position: center;
+}
+
+.project-media-split img,
+.documentation-grid img {
+  max-height: 7cm;
+  object-position: center;
+}
+
+/* A 16:9 poster at full measure is 10.4cm tall, so two of them plus their
+   headings overrun a page and the second is bumped. Hold them narrower, and
+   size to the frame rather than stretching: a vertical video letterboxed into
+   a landscape box is 8cm of mostly white. */
+.print-video {
+  max-width: 12cm;
+}
+
+.print-video img {
+  width: auto;
+  max-width: 100%;
+  max-height: 6.5cm;
+}
+
+/* A project whose whole documentation is one video is a poster frame and a
+   link; at full height it doesn't fit under its own heading and drags a third
+   of a page of white behind it. */
+.project-single-media .print-video img {
+  max-height: 5.5cm;
+}
+
+.print-video-link {
+  display: inline-block;
+  margin-top: 0.1cm;
+  word-break: break-all;
+}
+
+.print-url {
+  margin-left: 0.2cm;
+  word-break: break-all;
+}
+
+/* --- Fanzine ------------------------------------------------------------ */
+/* The booklet is the outcome of the course, so its pages are plates: each
+   spread at full measure, in the order it was printed. The cover carries only
+   the seminar's opening statement, which is set as text below rather than
+   reproduced as an image — white-on-black type at plate size is unreadable on
+   paper and wastes a page saying what a paragraph can say. */
+.fanzine-statement {
+  margin: 0 0 0.5cm 0.6cm;
+}
+
+.fanzine-statement p {
+  margin-bottom: 0.3cm;
+}
+
+.fanzine-statement-credit {
+  display: block;
+  font-family: var(--mono);
+  font-size: 8.5pt;
+  color: var(--muted);
+  margin-bottom: 0.25cm;
+}
+
+.print-fanzine img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+.print-fanzine-spread {
+  margin-bottom: 0.4cm;
+  break-inside: avoid;
+}
+
+.fanzine-actions {
+  margin-bottom: 0.4cm;
+}
+
+.download-btn {
+  font-family: var(--mono);
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+/* --- Screen preview ----------------------------------------------------- */
+@media screen {
+  body {
+    background: #f5f5f5;
+    padding: 2cm 1cm;
+  }
+
+  #print-root {
+    background: #fff;
+    width: 21cm;
+    margin: 0 auto;
+    padding: 1.25cm;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Entries documented by a single project run on instead of each opening a page
+   they only half fill. */
+.entry-brief {
+  break-before: auto;
+  margin-top: 0.8cm;
+}
+
+.entry-brief .entry-header h1 {
+  font-size: 11pt;
+}
+
+/* Secondary evidence at secondary scale, so two brief entries share a page
+   instead of each taking one and leaving half of it white. */
+.entry-brief .print-course-body img {
+  max-height: 7cm;
+}
